@@ -14,9 +14,16 @@ body{
 .container {
     display: flex;
     flex-direction: column;
+    padding: 60px 40px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.balance{
+    margin-bottom: 55px;
 }
 
 .balance__control {
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
 }

@@ -1,11 +1,11 @@
 import './App.css';
 import Balance from "./Balance";
-
+import store from "./redux/store";
 
 function App() {
     return (
         <div className="App wrapper">
-            <Balance cash='24'></Balance>
+            <Balance store={store}></Balance>
         </div>
     );
 }
