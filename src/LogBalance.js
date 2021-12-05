@@ -1,8 +1,20 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
-function LogBalance(props) {
+
+function LogBalance({data}) {
+
+    const [logText, setLogText] = useState('')
+
+    const {text, id} = data;
+
+    useEffect(() => {
+        if (text) {
+            setLogText(text)
+        }
+    }, [text])
+
     return (
-        <div className={props.operationType}>{props.operationValue}</div>
+        <div id={data.id}> {data.text} </div>
     );
 }
 

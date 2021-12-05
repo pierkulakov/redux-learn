@@ -19,9 +19,9 @@ export function inputText(text) {
     }
 }
 
-export function balanceChange(text, id, kind) {
+export function balanceChange(text, id) {
     return {
         type: BALANCE_CHANGE,
-        date: {text, id, kind}
+        data: {text, id}
     }
 }

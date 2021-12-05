@@ -5,16 +5,18 @@ const initialState = {
 }
 
 export const changeReducer = (state = initialState, action) => {
-    console.log('Change Balance Reducer >>', action)
+
+    console.log('data from action = ', action)
+
     switch (action.type) {
         case BALANCE_CHANGE:
             return {
                 ...state,
-                balance: action.text,
-
+                operations: [...state.operations, action.data],
             }
         default: {
             return state;
         }
     }
+
 }
