@@ -1,11 +1,13 @@
 import './App.css';
 import Balance from "./Balance";
-import store from "./redux/store";
+import Title from "./Title";
+import Operations from "./Operations";
 
 function App() {
     return (
         <div className="App wrapper">
-            <Balance store={store}></Balance>
+            <Balance></Balance>
+            <Operations />
         </div>
     );
 }

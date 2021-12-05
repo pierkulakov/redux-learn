@@ -1,4 +1,7 @@
 import {connect} from "react-redux";
+import {decrementBalance, incrementBalance} from "./redux/actions";
+import Title from "./Title";
+import Operations from "./Operations";
 
 function Balance(props) {
     return (
@@ -6,19 +9,32 @@ function Balance(props) {
             <div>Account Holder: {props.account_holder}</div>
             <div className='balance'>{props.cash}$</div>
             <div className="balance__control">
-                <button>ADD</button>
-                <button>GET</button>
+                <button onClick={props.onIncrementBalance}>ADD</button>
+                <button onClick={props.onDecrementBalance}>GET</button>
             </div>
+
+            <Title></Title>
+
         </div>
     )
 }
 
 function mapStateToProps(state) {
-    console.log('state > ', state);
+
+    const {balanceReducer} = state;
+
     return {
-        cash: state.cash,
-        account_holder: state.account_holder,
+        cash: balanceReducer.cash,
+        account_holder: balanceReducer.account_holder,
     }
 }
 
-export default connect(mapStateToProps)(Balance);
+function mapDispatchToProps(dispatch) {
+    return {
+        onIncrementBalance: () => dispatch(incrementBalance()),
+        onDecrementBalance: () => dispatch(decrementBalance()),
+    }
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Balance);

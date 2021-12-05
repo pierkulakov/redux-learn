@@ -14,7 +14,7 @@ body{
 .container {
     display: flex;
     flex-direction: column;
-    padding: 60px 40px;
+    padding: 40px 40px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -26,4 +26,6 @@ body{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+
+    margin-bottom: 50px;
 }
