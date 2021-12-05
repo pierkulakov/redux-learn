@@ -1,7 +1,22 @@
-.container {
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body{
+    font-family: Montserrat;
+}
+
+.wrapper {
     display: grid;
     height: 100vh;
     justify-content: center;
     align-items: center
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.balance__control {
+    display: flex;
+    flex-direction: row;
+}
