@@ -5,7 +5,6 @@ import LogBalance from "./LogBalance";
 
 
 function Operations(props) {
-
     const dispatch = useDispatch()
     const [textBalance, setTextBalance] = useState(0);
 
@@ -25,7 +24,7 @@ function Operations(props) {
         e.preventDefault();
         const id = Math.floor(Math.random() * 2421);
         dispatch(balanceChange(textBalance, id));
-        console.log('отправили туда', textBalance, id)
+        console.log('We\'re send', textBalance, id)
     }
 
     return (

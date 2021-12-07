@@ -1,7 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-body{
+body {
     font-family: Montserrat;
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+}
+
+/* Обнуление стилей кнопки */
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    /* отображаем курсор в виде руки при наведении; некоторые
+    считают, что необходимо оставлять стрелочный вид для кнопок */
+    cursor: pointer;
 }
 
 .wrapper {
@@ -15,11 +29,21 @@ body{
     display: flex;
     flex-direction: column;
     padding: 40px 40px;
+    border-radius: 15px;
+    background: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.balance{
+.balance {
     margin-bottom: 55px;
+}
+
+.balance__header-holder {
+    margin-bottom: 1rem;
+}
+
+.balance__header-balance {
+    margin-bottom: 1rem;
 }
 
 .balance__control {
@@ -28,4 +52,25 @@ body{
     flex-direction: row;
 
     margin-bottom: 50px;
+}
+
+.balance__control-btn {
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.balance__control-btn:hover {
+    padding: 5px 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.balance__control-btn.add:hover {
+    color: #147A3F;
+    background: rgba(161, 255, 200, 0.24);
+}
+
+.balance__control-btn.get:hover {
+    color: #95271A;
+    background: rgba(192, 50, 33, 0.2);
+    border-radius: 4px;
 }

@@ -18,5 +18,4 @@ export const changeReducer = (state = initialState, action) => {
             return state;
         }
     }
-
 }
